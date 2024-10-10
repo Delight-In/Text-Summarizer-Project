@@ -42,7 +42,7 @@ class DBSCAN:
             if len(new_neighbors) >= self.min_samples:
                 neighbors = np.union1d(neighbors, new_neighbors)
 
-# Example usage
+# Example:
 if __name__ == "__main__":
     # Generate synthetic data
     np.random.seed(42)
