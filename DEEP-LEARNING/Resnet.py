@@ -81,3 +81,5 @@ def ResNet50(input_shape, classes):
     model = Model(inputs = X_input, outputs = X, name='ResNet50')
     return model
 
+model = ResNet50((224,224,3),2)
+model.summary()
