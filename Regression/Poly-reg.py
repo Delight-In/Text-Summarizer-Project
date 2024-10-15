@@ -1,19 +1,20 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.datasets import load_boston
+# Instead of load_boston, using fetch_california_housing
+from sklearn.datasets import fetch_california_housing 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
-# Load the Boston Housing dataset
-boston = load_boston()
-X = pd.DataFrame(boston.data, columns=boston.feature_names)
-y = pd.Series(boston.target)
+# Load the California Housing dataset
+housing = fetch_california_housing()
+X = pd.DataFrame(housing.data, columns=housing.feature_names)
+y = pd.Series(housing.target)
 
-# For simplicity, we'll just use one feature (e.g., RM - number of rooms)
-X = X[['RM']]
+# For simplicity, we'll just use one feature (e.g., MedInc - median income)
+X = X[['MedInc']]  # Changed from 'RM' to 'MedInc'
 y = y
 
 # Split the dataset into training and testing sets

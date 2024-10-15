@@ -34,7 +34,7 @@ column_names = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD',
 data = pd.read_csv(url, header=None, names=column_names)
 
 # Selecting features (x) and target (y)
-X = data[['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV']].values  # Using multiple features
+X = data[['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT']].values  # Using multiple features
 y = data['MEDV'].values
 
 # Splitting the data into training, validation, and test sets
