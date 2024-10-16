@@ -1,6 +1,6 @@
 pandas
 numpy
-scikit-lear
+scikit-learn
 matplotlib
 tensorflow
 keras
