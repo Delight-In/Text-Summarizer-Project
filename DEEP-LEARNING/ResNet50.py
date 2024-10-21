@@ -11,7 +11,6 @@ def identity_block(X, f, filters, stage, block):
     bn_name_base = 'bn' + str(stage) + block + '_branch'
     
     F1, F2, F3 = filters
-    
     X_shortcut = X
         
     X = Conv2D(filters = F1, kernel_size = (1, 1), strides = (1,1), padding = 'valid', name = conv_name_base + '2a', kernel_initializer = glorot_uniform(seed=0))(X)
