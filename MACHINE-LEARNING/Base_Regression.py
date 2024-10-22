@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class BaseRegression:
     def __init__(self, learning_rate: float = 0.001, n_iters: int = 1000):
         # Assign the variables
