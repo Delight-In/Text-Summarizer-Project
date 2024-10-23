@@ -20,7 +20,7 @@ class LinearRegression:
 
             # Compute gradient
             dw = (1/n_samples) * np.dot(X.T, (y_predicted - y))
-            db = (1/n_samples) * np.sum(y_predicted)
+            db = (1/n_samples) * np.sum(y_predicted -y)
 
             # Update parameters
             self.weights -= self.learning_rate * dw

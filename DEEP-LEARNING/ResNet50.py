@@ -81,4 +81,9 @@ def ResNet50(input_shape, classes):
     return model
 
 model = ResNet50((224,224,3),2)
-model.summary()
+print(model.summary())
+
+from tensorflow.keras.applications import ResNet50
+model = ResNet50((224,224,3))
+print(model.summary())
+

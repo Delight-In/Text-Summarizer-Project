@@ -1,6 +1,6 @@
 import numpy as np
 
-class NaiveBayes:
+class NaiveBayes:      # naive = independent features
     def fit(self, X, y):
         n_samples, n_features = X.shape
         self._classes = np.unique(y)
@@ -11,7 +11,7 @@ class NaiveBayes:
         self._var = np.zeros((n_classes, n_features), dtype=np.float64)
         self._priors = np.zeros(n_classes, dtype=np.float64)
 
-        for idx, c in enumerate(self._classes):
+        for idx, c in enumerate(self._classes): # enumerate makes iterating over sequences by providing both the index and the item from the iterable.
             X_c = X[y == c]
             self._mean[idx, :] = X_c.mean(axis=0)
             self._var[idx, :] = X_c.var(axis=0)
