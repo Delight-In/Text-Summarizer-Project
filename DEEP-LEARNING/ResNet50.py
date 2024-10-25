@@ -4,7 +4,6 @@ from tensorflow.keras.layers import Input, Add, Dense, Activation, ZeroPadding2D
 from tensorflow.keras.models import Model
 from tensorflow.keras.initializers import glorot_uniform
 
-
 def identity_block(X, f, filters, stage, block):
     
     conv_name_base = 'res' + str(stage) + block + '_branch'
@@ -57,6 +56,7 @@ def ResNet50(input_shape, classes):
     X = Conv2D(64, (7, 7), strides = (2, 2), name = 'conv1', kernel_initializer = glorot_uniform(seed=0))(X)
     X = BatchNormalization(axis = 3, name = 'bn_conv1')(X)
     X = Activation('relu')(X)
+    X = ZeroPadding2D((3, 3))(X_input)
     X = MaxPooling2D((3, 3), strides=(2, 2))(X)
     X = convolutional_block(X, f = 3, filters = [64, 64, 256], stage = 2, block='a', s = 1)
     X = identity_block(X, 3, [64, 64, 256], stage=2, block='b')
