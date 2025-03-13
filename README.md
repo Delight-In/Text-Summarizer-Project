@@ -12,3 +12,8 @@ The Text Summarizer project is focused on building and training a machine learni
 
 5. **Saving the Model**: After training, the fine-tuned model and tokenizer are saved for future use, enabling the model to generate summaries on new, unseen text.
 
+
+
+
+
+
