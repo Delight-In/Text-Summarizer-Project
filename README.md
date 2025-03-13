@@ -14,6 +14,3 @@ The Text Summarizer project is focused on building and training a machine learni
 
 
 
-
-
-
